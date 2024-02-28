@@ -312,13 +312,33 @@ setTimeout(autoplay, 4500);
 
 <script>
 
-  
-	const bg = document.getElementById('head');
+var w = document.documentElement.clientWidth || window.innerWidth;
+if (w <= 600) {
+
+  const bg = document.getElementById('head');
+	window.addEventListener('scroll', function(){
+ 	 	bg.style.backgroundSize = 200 +window.pageYOffset/5+'%';
+		
+         
+ 	})
+
+
+
+} else {
+
+  const bg = document.getElementById('head');
 	window.addEventListener('scroll', function(){
  	 	bg.style.backgroundSize = 100 +window.pageYOffset/5+'%';
 		
          
  	})
+
+
+}
+
+
+  
+	
 
    const bg1= document.getElementById('about');
 	 window.addEventListener('scroll', function(){
